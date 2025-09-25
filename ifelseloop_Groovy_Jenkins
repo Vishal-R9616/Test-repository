@@ -1,22 +1,21 @@
 pipeline {
-	agent {
-		docker { image 'node:16-alpine' }
-	}
-	stages {
-		stage('Check Birthday') {
-			steps {
-				scripts {
-					def a = 10
-					def b = 6
-					def c = a + b
-					if (c==16) {
-						echo "My birthday"
-					} else {
-						echo "Sorry"
-						}
-					}
-				}
-			}
-		}
-	}
+    agent {
+        docker { image 'node:16-alpine' }
+    }
+    stages {
+        stage('Check Birthday') {
+            steps {
+                script {
+                    def a = 10
+                    def b = 6
+                    def c = a + b
+                    if (c == 16) {
+                        echo "My birthday"
+                    } else {
+                        echo "Sorry"
+                    }
+                }
+            }
+        }
+    }
 }
