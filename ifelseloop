@@ -4,7 +4,7 @@ a=4
 b=12
 c=$((a+b))
 
-if ( "$c" -eq 16 );
+if [ "$c" -eq 16 ];
 then
 	echo "My birthday"
 else

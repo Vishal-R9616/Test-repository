@@ -1,0 +1,20 @@
+pipeline {
+	agent any {
+		stages {
+			stage('Check Birthday') {
+				steps {
+					scripts {
+						def a = 10
+						def b = 6
+						def c = a + b
+						if (c==16) {
+							echo "My birthday"
+						} else {
+							echo "Sorry"
+						}
+						}
+					}
+				}
+			}
+	}
+}
